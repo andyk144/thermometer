@@ -5,7 +5,7 @@ function Thermostat() {
   this.powerSaving = true;
   this.powerSavingMax = 25;
   this.energy = 'medium-usage';
-};
+}
 
 Thermostat.prototype.increase = function() {
   if ((this.powerSaving === true)&&(this.temperature === this.powerSavingMax)) {
@@ -17,7 +17,7 @@ Thermostat.prototype.increase = function() {
   } else {
       this.temperature += 1;
       this._energyUsageChange();
-};
+}
 };
 
 Thermostat.prototype.decrease = function() {
@@ -27,7 +27,7 @@ Thermostat.prototype.decrease = function() {
   } else {
     this.temperature -= 1;
     this._energyUsageChange();
-  };
+  }
 };
 
 Thermostat.prototype.powerSavingToggle = function() {
@@ -50,5 +50,7 @@ Thermostat.prototype._energyUsageChange = function() {
     this.energy = 'low-usage';
   } else if (this.temperature > 25) {
     this.energy = 'high-usage';
+  } else {
+    this.energy = 'medium-usage';
   }
-}
+};
