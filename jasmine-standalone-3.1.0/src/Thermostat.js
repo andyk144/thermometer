@@ -32,6 +32,9 @@ Thermostat.prototype.decrease = function() {
 
 Thermostat.prototype.powerSavingToggle = function() {
   this.powerSaving = this.powerSaving === true ? false : true;
+  if(this.temperature > this.powerSavingMax) {
+    this.temperature = this.powerSavingMax;
+  }
 };
 
 // Thermostat.prototype.powerSavingOn = function() {

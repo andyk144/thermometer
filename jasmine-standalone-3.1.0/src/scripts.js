@@ -2,6 +2,8 @@ $(document).ready(function() {
   var thermostat = new Thermostat();
   $('#temperature_display').text(thermostat.temperature);
 
+  $('#powersavemode').text(thermostat.powerSaving === true? "On" : "Off");
+
   $('.btn.btn-danger').click(function() {
     thermostat.increase();
     $('#temperature_display').text(thermostat.temperature);
@@ -19,6 +21,8 @@ $(document).ready(function() {
 
   $('.btn.btn-success').click(function() {
     thermostat.powerSavingToggle();
+    $('#powersavemode').text(thermostat.powerSaving === true? "On" : "Off");
+    $('#temperature_display').text(thermostat.temperature);
   });
 
 });
