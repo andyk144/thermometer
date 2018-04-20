@@ -17,7 +17,7 @@ describe('Thermostat', function(){
   it('decreases the temperature', function() {
     thermostat.decrease();
     expect(thermostat.temperature).toEqual(19);
-  })
+  });
 
   it('will not allow the temp below 10 degrees', function() {
     thermostat.temperature = 10;
@@ -42,8 +42,8 @@ describe('Thermostat', function(){
   });
 
   it('restricts the max temp to 32 degrees when power saving mode is off', function() {
-    thermostat.temperature = 32;
     thermostat.powerSavingToggle();
+    thermostat.temperature = 32;
     expect(function(){thermostat.increase()}).toThrowError('Max temp is 32 degrees');
   });
 
