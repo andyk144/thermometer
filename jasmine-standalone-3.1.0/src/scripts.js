@@ -1,5 +1,12 @@
 $(document).ready(function() {
   var thermostat = new Thermostat();
+
+  $.ajax("http://api.openweathermap.org/data/2.5/weather?q=Hell&appid=1ca7d6930958d6a2e884317713344dbe&units=metric")
+    .done(function(data){
+      $('#outsideTemp').text(data.main.temp);
+      $('#weather').text(data.weather[0].description);
+    });
+
   $('#temperature_display').text(thermostat.temperature);
 
   $('#powersavemode').text(thermostat.powerSaving === true? "On" : "Off");
