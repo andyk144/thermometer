@@ -4,12 +4,56 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="bootstrap-4.1.0-dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="Bootstrap/bootstrap.min.css" rel="stylesheet"/>
     <style media="screen" type="text/css">
 
     #temperature_display {
       font-size: 100px;
+      display: inline;
     }
+
+    #control-container {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      width: 550px;
+      border-style: outset;
+      border-color: #78898B;
+    }
+
+    #one {
+      text-align: right;
+    }
+
+    #two {
+      text-align: center;
+    }
+
+    #buttons {
+      padding-top: 5px;
+    }
+
+    .custom {
+      width: 100px !important;
+    }
+
+    #energy {
+      padding-top: 20px;
+    }
+
+    #temperature {
+      padding-top: 30px;
+    }
+
+    #degrees {
+      font-size: 60px;
+      display: inline;
+      vertical-align: top;
+    }
+
+
+
     </style>
 
 
@@ -17,44 +61,107 @@
 
     <title>Thermostat</title>
   </head>
-  <body>
-    <div class="row justify-content-center">
-      <h1>Temperature:</h1>
-    </div>
+  <body style="height:100%">
+    <div class="container-fluid">
+
+
+    <div class="container" id="control-container" >
+      <div class="container">
+        <div class="row">
+          <div class="col" id="two">
+            <h1>Temperature:</h1>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col" id="two">
+            <p id="temperature_display"></p><span id="degrees">&#8451;</span>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col" id="two">
+            <h3>Powersave mode: <span id="powersavemode"></span></h3>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col" id="one">
+            <button type="button" class="btn btn-primary custom" id="decrease">Decrease</button>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-danger custom">Increase</button>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row" id="buttons">
+          <div class="col" id="one">
+            <button type="button" class="btn btn-success custom">Power Save</button>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-info custom">Reset</button>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row" id="energy">
+          <div class="col" id="two">
+            <h5>Energy Usage: <span id="energy_display"></span></h5>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row" id="temperature">
+          <div class="col">
+            <h3>Check the temperature somewhere:</h3>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="cityName" placeholder="City name..." aria-label="city" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" id="cityButton">Enter</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 
-    <div class="row justify-content-center"><p id="temperature_display"></p>&#8451;</div>
-    <br>
-    <div class="row justify-content-center">
-      <h3>Powersave mode:</h3>
-    </div>
 
-    <div id="powersavemode" class="row justify-content-center">
-    </div>
 
-  <div class="row justify-content-center">
-    <button type="button" class="btn btn-primary">Decrease</button>
-    <button type="button" class="btn btn-danger">Increase</button>
+          <!-- <div class="col" id="one">
+            <input id="cityName" type="text" name="city" placeholder="Enter a city name..."/>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-info" id="cityButton">Enter</button>
+          </div> -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col" id="two">
+            <h5>Current temperature in <span id="city"></span>: <span id="outsideTemp"></span>&#8451;</h5>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col" id="two">
+            <h5>Current weather conditions: <span id="weather"></span></h5>
+          </div>
+        </div>
+      </div>
+
+
+</div>
+
   </div>
-  <br>
-  <div class="row justify-content-center">
-    <button type="button" class="btn btn-success">Power Save</button>
-    <button type="button" class="btn btn-info">Reset</button>
-  </div>
-
-  <div id="energy_display" class="row justify-content-center"></div>
-  <br>
-  <div class="row justify-content-center">
-  <p>Current temperature in <span id=city></span>:</p><div id="outsideTemp"></div>
-  <p>Current weather: <div id="weather"></div>
-  </div>
-
-  <div class="row justify-content-center">
-    <input id="cityName" type="text" name="city"/>
-    <button type="button" class="btn btn-info" id="cityButton">Enter</button>
-  </div>
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="bootstrap-4.1.0-dist/js/bootstrap.min.js"></script>
