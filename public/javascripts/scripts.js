@@ -4,7 +4,7 @@ $(document).ready(function() {
   var city = "Bournemouth";
 
 
-  $.ajax("https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=process.env.API_KEY&units=metric")
+  $.ajax("https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+process.env.API_KEY+"&units=metric")
     .done(function(data){
       $('#outsideTemp').text(data.main.temp);
       $('#weather').text(data.weather[0].description);
@@ -65,7 +65,7 @@ $(document).ready(function() {
   $('#cityButton').click(function() {
     city = $("#cityName").val();
     $('#city').text(city);
-    $.ajax("https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=process.env.API_KEY&units=metric")
+    $.ajax("https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+(process.env.API_KEY)+"&units=metric")
       .done(function(data){
         $('#outsideTemp').text(data.main.temp);
         $('#weather').text(data.weather[0].description);
