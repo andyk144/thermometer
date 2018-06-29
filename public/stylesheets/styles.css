@@ -1,0 +1,44 @@
+#temperature_display {
+  font-size: 100px;
+  display: inline;
+}
+
+#control-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 550px;
+  border-style: outset;
+  border-color: #78898B;
+}
+
+#one {
+  text-align: right;
+}
+
+#two {
+  text-align: center;
+}
+
+#buttons {
+  padding-top: 5px;
+}
+
+.custom {
+  width: 100px !important;
+}
+
+#energy {
+  padding-top: 20px;
+}
+
+#temperature {
+  padding-top: 30px;
+}
+
+#degrees {
+  font-size: 60px;
+  display: inline;
+  vertical-align: top;
+}
