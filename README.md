@@ -1,8 +1,8 @@
 # JavaScript Thermostat
 
-Makers week 5 project, an introduction to JavaScript. The task was to build a simple thermostat, and learn to hook it up to a dynamic visual interface using jQuery - all within the browser. In addition, we were asked to use JavaScript to fetch data from external sources and display that on the page.
+Makers week 5 project, an introduction to JavaScript. The task was to build a simple thermostat, and learn to hook it up to a dynamic visual interface using jQuery - all within the browser. Once we had a UI built, we were asked to use JavaScript to fetch data from external sources and display that on the page.
 
-I used Node.js for my web server and the Express web framework. I also used the Bootstrap CSS framework to help with styling the thermostat UI.  
+In addition to JavaScript and jQuery, I used Node.js for my web server and the Express web framework. I also used the Bootstrap CSS framework to help with styling the thermostat UI.  
 
 
 ## Getting Started
@@ -24,7 +24,7 @@ cd thermostat
 You'll need to ensure you have downloaded Node, you can do so by:
 
 Download the required installer:
-1. Go to [https://nodejs.org/en/]
+1. Go to https://nodejs.org/en/
 2. Select the button to download the LTS build that is "Recommended for most users".
 3. Install Node by double-clicking on the downloaded file and following the installation prompts.
 
@@ -50,7 +50,7 @@ Navigate to [http://localhost:3000] (or whichever port your server is running on
 
 ## Running the tests
 
-To run the tests, open [SpecRunner.html](/jasmine-standalone-3.1.0/SpecRunner.html) in your chosen browser.
+To run the tests, open **SpecRunner.html** in your chosen browser.
 
 ![Alt test](/images/tests.png?raw=true "Jasmine tests")  
 
