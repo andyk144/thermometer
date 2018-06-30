@@ -46,7 +46,7 @@ This will start the Node server
 
 ![Alt test](/images/npm_install.png?raw=true "Node Server")
 
-Navigate to [http://localhost:3000] (or whichever port your server is running on) and the app will be up and running.
+Navigate to http://localhost:3000 (or whichever port your server is running on) and the app will be up and running.
 
 ## Running the tests
 
